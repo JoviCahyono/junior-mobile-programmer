@@ -15,18 +15,35 @@
         android:inputType="number"
         android:visibility="gone"/>
 
+    <TextView
+        android:id="@+id/text_label_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama:"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
     <EditText
         android:id="@+id/txt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Nama"/>
+        android:hint="Masukkan Nama"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/text_label_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat:"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/txt_address"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Alamat"/>
+        android:hint="Masukkan Alamat"
+        android:minHeight="48dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -36,15 +53,15 @@
 
         <Button
             android:id="@+id/btn_submit"
-            android:layout_weight="0.5"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Submit"/>
 
         <Button
             android:id="@+id/btn_cancel"
-            android:layout_weight="0.5"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Cancel"/>
 
