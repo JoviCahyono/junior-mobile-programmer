@@ -16,6 +16,18 @@
         android:visibility="gone"/>
 
     <TextView
+        android:id="@+id/text_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Data Diri"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@android:color/black" />
+
+
+    <TextView
         android:id="@+id/text_label_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,10 +35,11 @@
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:hint="Masukkan Nama"
         android:minHeight="48dp" />
 
@@ -38,11 +51,14 @@
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txt_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
         android:hint="Masukkan Alamat"
+        android:inputType="text"
         android:minHeight="48dp" />
 
     <LinearLayout
