@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg3"
     tools:showIn="@layout/app_bar_main">
 
     <com.synnapps.carouselview.CarouselView
@@ -28,10 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_below="@+id/carouselView">
 
     <LinearLayout
@@ -41,22 +40,32 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="@dimen/lebar"
-            android:layout_height="@dimen/tinggi"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
             android:text="Nama"
-            android:id="@+id/nama"/>
+            android:id="@+id/nama"
+            android:background="@drawable/custom_button"/>
 
         <Button
+            android:textStyle="bold"
+            android:layout_margin="5dp"
             android:layout_width="@dimen/lebar"
-            android:layout_height="@dimen/tinggi"
+            android:layout_height="50dp"
             android:text="Kalkulator"
-            android:id="@+id/kalkulator"/>
+            android:id="@+id/kalkulator"
+            android:background="@drawable/custom_button"/>
 
         <Button
+            android:textStyle="bold"
+            android:layout_margin="5dp"
             android:layout_width="@dimen/lebar"
-            android:layout_height="@dimen/tinggi"
+            android:layout_height="50dp"
             android:text="Lingkaran"
-            android:id="@+id/lingkaran"/>
+            android:id="@+id/lingkaran"
+            android:background="@drawable/custom_button"/>
+
     </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -65,22 +74,31 @@
             android:orientation="horizontal">
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Bilangan"
-                android:id="@+id/bilangan"/>
+                android:id="@+id/bilangan"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Login"
-                android:id="@+id/login"/>
+                android:id="@+id/login"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Sign Up"
-                android:id="@+id/signup"/>
+                android:id="@+id/signup"
+                android:background="@drawable/custom_button"/>
 
         </LinearLayout>
 
@@ -91,22 +109,31 @@
             android:orientation="horizontal">
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Calculator"
-                android:id="@+id/calculator"/>
+                android:id="@+id/calculator"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="BMI"
-                android:id="@+id/bmi"/>
+                android:id="@+id/bmi"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="List View"
-                android:id="@+id/listview"/>
+                android:id="@+id/listview"
+                android:background="@drawable/custom_button"/>
 
         </LinearLayout>
 
@@ -117,22 +144,31 @@
             android:orientation="horizontal">
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Catatan"
-                android:id="@+id/catatan"/>
+                android:id="@+id/catatan"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="File"
-                android:id="@+id/internalexternal"/>
+                android:id="@+id/internalexternal"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Storage"
-                android:id="@+id/storage"/>
+                android:id="@+id/storage"
+                android:background="@drawable/custom_button"/>
 
         </LinearLayout>
 
@@ -143,22 +179,31 @@
             android:orientation="horizontal">
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="List"
-                android:id="@+id/list"/>
+                android:id="@+id/list"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="SQLite"
-                android:id="@+id/sqlite"/>
+                android:id="@+id/sqlite"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="MySQL"
-                android:id="@+id/mysql"/>
+                android:id="@+id/mysql"
+                android:background="@drawable/custom_button"/>
 
         </LinearLayout>
 
@@ -169,22 +214,31 @@
             android:orientation="horizontal">
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="CEK GPS"
-                android:id="@+id/gps"/>
+                android:id="@+id/gps"
+                android:background="@drawable/custom_button"/>
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:id="@+id/seluler"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
-                android:text="Seluler"
-                android:id="@+id/seluler"/>
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_button"
+                android:text="Seluler" />
 
             <Button
+                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:layout_width="@dimen/lebar"
-                android:layout_height="@dimen/tinggi"
+                android:layout_height="50dp"
                 android:text="Sensor"
-                android:id="@+id/sensor"/>
+                android:id="@+id/sensor"
+                android:background="@drawable/custom_button"/>
 
         </LinearLayout>
     </LinearLayout>
