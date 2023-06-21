@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
 
         // Fade-in animation for the logo
         ObjectAnimator logoAnimator = ObjectAnimator.ofFloat(logoImageView, "alpha", 0f, 1f);
-        logoAnimator.setDuration(1000);
+        logoAnimator.setDuration(1200);
         logoAnimator.setInterpolator(new AccelerateInterpolator());
         logoAnimator.start();
 
@@ -32,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
             Intent intent=new Intent(SplashActivity.this,MainActivity.class);
             startActivity(intent);
             finish();
-        },3000);
+        },3500);
 
     }
 }
