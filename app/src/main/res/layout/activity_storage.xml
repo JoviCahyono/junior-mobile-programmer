@@ -20,7 +20,6 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
-<!--    android:drawableStart="@drawable/ic_write"-->
         <EditText
             android:paddingLeft="10dp"
             android:drawablePadding="12dp"
@@ -37,8 +36,7 @@
             android:background="@drawable/custom_input"
             android:hint="Masukan Data"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:drawableLeft="@drawable/ic_write" />
+            android:minHeight="48dp" />
 
 
         <Button
@@ -51,14 +49,15 @@
             android:layout_height="wrap_content"
             android:text="Simpan ke Internal" />
 
-        <Button
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/custom_button"
-            android:id="@+id/save_external"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Simpan ke External" />
+    <Button
+        android:id="@+id/save_external"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Simpan ke External"
+        tools:ignore="TextSizeCheck" />
 
 </LinearLayout>
