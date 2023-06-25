@@ -1,5 +1,6 @@
 package com.sugiartha.juniorandroid;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -15,14 +16,15 @@ public class CalculatorActivity extends AppCompatActivity {
     EditText angka_pertama, angka_kedua;
     Button tambah, kurang, kali, bagi, bersihkan;
     TextView hasil;
-
+    ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
         //getSupportActionBar().setTitle("");
-
+        actionBar = getSupportActionBar();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         angka_pertama = (EditText) findViewById(R.id.angka_pertama);
         angka_kedua = (EditText) findViewById(R.id.angka_kedua);
         tambah = (Button)findViewById(R.id.tambah);
@@ -110,5 +112,14 @@ public class CalculatorActivity extends AppCompatActivity {
                 angka_pertama.requestFocus();
             }
         });
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
