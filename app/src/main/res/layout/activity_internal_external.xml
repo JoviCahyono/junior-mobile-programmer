@@ -7,40 +7,100 @@
     android:orientation="vertical"
     tools:context=".InternalExternalActivity">
 
-    <Button
-        android:id="@+id/btnBuatFile"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buat File"/>
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnUbahFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ubah File"/>
+        <Button
+            android:id="@+id/btnBuatFile"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/custom_button"
+            android:text="Buat File" />
 
-    <Button
-        android:id="@+id/btnBacaFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Baca File"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
 
-    <Button
-        android:id="@+id/btnHapusFile"
+        <Button
+            android:id="@+id/btnUbahFile"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/custom_button"
+            android:text="Ubah File" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hapus File"/>
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBacaFile"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/custom_button"
+            android:text="Baca File"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnHapusFile"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/custom_button"
+            android:text="Hapus File"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <EditText
         android:id="@+id/textBaca"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:inputType="textMultiLine"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/custom_button2"
         android:ems="10"
         android:gravity="left|top"
         android:padding="5dp"
         android:layout_marginTop="10dp"
-        android:hint="Hasil Baca File"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Hasil Baca File"
+        android:textSize="15dp"/>
 
 </LinearLayout>

@@ -5,26 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/newbg"
     tools:context=".StorageActivity">
 
-    <EditText
-        android:id="@+id/input_data"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Masukan Data"
-        android:inputType="textPersonName" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Storage"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:drawablePadding="12dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/input_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:background="@drawable/custom_input"
+            android:hint="Masukan Data"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+
+        <Button
+            android:textColor="@color/putih"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button"
+            android:id="@+id/save_internal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan ke Internal" />
 
     <Button
-        android:id="@+id/save_internal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Simpan ke Internal" />
-
-    <Button
+        android:textColor="@color/putih"
         android:id="@+id/save_external"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simpan ke External" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Simpan ke External"
+        tools:ignore="TextSizeCheck" />
 
 </LinearLayout>
