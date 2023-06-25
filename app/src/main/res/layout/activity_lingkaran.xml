@@ -5,36 +5,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".LingkaranActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="30dp"
-        android:text="Luas dan Keliling Lingkaran"/>
+        android:text="Luas dan Keliling Lingkaran"
+        android:textSize="27sp"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="40dp"
-        android:text="Masukkan Jari-Jari Lingkaran" />
+        android:text="Masukkan Jari-Jari Lingkaran"
+        android:textStyle="bold"
+        android:layout_marginLeft="7dp"
+        android:textColor="@color/hitam"
+        android:textSize="20sp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:hint="Input Jari-Jari"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/putih"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
         android:id="@+id/jari2"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:text="HITUNG"
+        android:textSize="18sp"
+        android:textColor="@color/putih"
+        android:textStyle="bold"
+        android:background="@drawable/bttn_shape2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
         android:id="@+id/hitung"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Luas dan Keliling"
-        android:id="@+id/nilai"/>
+        android:text="Luas Lingkaran : "
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/txtluas"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keliling Lingkaran : "
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/txtkeliling"/>
 
 </LinearLayout>

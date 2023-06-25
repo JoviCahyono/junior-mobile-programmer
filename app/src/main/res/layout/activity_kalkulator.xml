@@ -5,40 +5,137 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_shape3"
     tools:context=".KalkulatorActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="KALKULATOR SEDERHANA"
+        android:textSize="27sp"
+        android:textColor="@color/putih"
+        android:textStyle="bold|normal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Angka Pertama"/>
+        android:text="Input Angka Pertama"
+        android:textStyle="bold"
+        android:textColor="@color/putih"
+        android:textSize="22sp"
+        android:layout_marginLeft="7dp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:hint="Angka Pertama"
+        android:textSize="23sp"
+        android:layout_marginTop="20dp"
+        android:background="@color/putih"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
         android:id="@+id/angka1"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Angka Kedua"/>
+        android:text="Input Angka Kedua"
+        android:textSize="22sp"
+        android:textColor="@color/putih"
+        android:textStyle="bold"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:hint="Angka Kedua"
+        android:background="@color/putih"
+        android:textSize="23sp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
         android:id="@+id/angka2"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="HITUNG"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/putih"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bttn_shape2"
         android:id="@+id/btnHitung"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_shape"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hasil"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/txtHasil"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pertambahan :"
+        android:textSize="23sp"
+        android:textColor="@color/hitam"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:textStyle="bold"
+        android:id="@+id/tambah"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengurangan :"
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/kurang"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perkalian :"
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/kali"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pembagian :"
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/bagi"/>
+
+    </LinearLayout>
 </LinearLayout>
