@@ -6,12 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#14c3a2"
     tools:context=".PegawaiMainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Pegawai" />
+        android:layout_marginTop="70dp"
+        android:text="Nama Pegawai"
+        android:textColor="#292522"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -21,7 +24,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Posisi" />
+        android:text="Posisi"
+        android:textColor="#292522"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -31,7 +35,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gaji" />
+        android:text="Gaji"
+        android:textColor="#292522"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -41,12 +46,18 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Tambah Pegawai"
+        android:background="@drawable/button_shapes"
+        android:textColor="#FFF"
         android:id="@+id/buttonAdd" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Daftar Pegawai"
+        android:background="@drawable/button_shapes"
+        android:textColor="#FFF"
         android:id="@+id/buttonView" />
 
 </LinearLayout>
