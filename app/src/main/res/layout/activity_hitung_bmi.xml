@@ -1,27 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#97C8EB"
     android:orientation="vertical"
     tools:context=".HitungBMIActivity">
+
+    <TextView
+        android:id="@+id/textBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#3F51B5"
+        android:text="Hitung BMI"
+        android:textColor="@color/putih"
+        android:textSize="21sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/txtberatbadanideal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#97C8EB"
+        android:fontFamily="sans-serif-black"
+        android:text="Menghitung Berat Badan Ideal"
+        android:textAlignment="center"
+        android:textColor="#093A3E"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="132dp"
+        android:layout_height="105dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/timbangan" />
+
+    <TextView
+        android:id="@+id/txtberatbadankg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Berat Badan (kg)"
+        android:textSize="9pt" />
 
     <EditText
         android:id="@+id/txtBeratBadan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textSize="20dp"
         android:hint="Isikan berat badan (kg)"
         android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txttinggibadancm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Tinggi Badan (cm)"
+        android:textSize="9pt" />
 
     <EditText
         android:id="@+id/txtTinggiBadan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Isikan tinggi badan (m)"
+        android:textSize="20dp"
+        android:hint="Isikan tinggi badan (cm)"
         android:inputType="number|numberDecimal" />
 
     <Button
@@ -35,6 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Status Badan"
+        android:layout_marginTop="15dp"
         android:textAlignment="center"
         android:textSize="24sp" />
 

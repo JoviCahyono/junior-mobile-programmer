@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg"
+    android:background="@color/lightskyblue"
     android:gravity="center"
     tools:context=".SignupActivity">
 
@@ -23,51 +23,59 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/putih"
-            android:textSize="20dp"
-            android:text="Nama Lengkap"/>
+            android:fontFamily="sans-serif-black"
+            android:text="Nama Lengkap"
+            android:textColor="@color/midnightgreen"
+            android:textSize="20dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:hint="Masukkan Nama Lengkap"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/putih"
-            android:textSize="20dp"
-            android:text="Username"/>
+            android:fontFamily="sans-serif-black"
+            android:text="Username"
+            android:textColor="@color/midnightgreen"
+            android:textSize="20dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:hint="Masukkan Username"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/putih"
-            android:textSize="20dp"
-            android:text="Password"/>
+            android:fontFamily="sans-serif-black"
+            android:text="Password"
+            android:textColor="@color/midnightgreen"
+            android:textSize="20dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:hint="Masukkan Password"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/putih"
-            android:textSize="20dp"
-            android:text="Jenis Kelamin"/>
+            android:fontFamily="sans-serif-black"
+            android:text="Jenis Kelamin"
+            android:textColor="@color/midnightgreen"
+            android:textSize="20dp" />
 
         <Spinner
+            android:id="@+id/spinner_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_id">
-
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck">
         </Spinner>
 
         <Button
