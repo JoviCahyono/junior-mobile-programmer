@@ -42,6 +42,7 @@ public class SQLiteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sqlite);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Tambah SQLite
         SQLite = new DbHelper(getApplicationContext());
@@ -121,5 +122,14 @@ public class SQLiteActivity extends AppCompatActivity {
             itemList.add(data);
         }
         adapter.notifyDataSetChanged();
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

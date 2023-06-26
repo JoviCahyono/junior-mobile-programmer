@@ -7,13 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@drawable/newbg"
     tools:context=".CatatanExternalActivity">
 
     <TextView
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/bg_shape2"
         android:gravity="center"
         android:text="CATATAN"
         android:textSize="20dp"
@@ -21,8 +22,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Penyimpanan internal"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
@@ -36,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
+            android:textStyle="bold"
             android:hint="Mulai menulis"
             android:inputType="textMultiLine"
             android:minLines="5" />

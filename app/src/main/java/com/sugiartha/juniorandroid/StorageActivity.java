@@ -23,7 +23,7 @@ public class StorageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         InputData = findViewById(R.id.input_data);
         Internal = findViewById(R.id.save_internal);
         External = findViewById(R.id.save_external);
@@ -90,5 +90,14 @@ public class StorageActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

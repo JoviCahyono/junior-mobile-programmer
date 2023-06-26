@@ -43,26 +43,51 @@
         <activity
             android:name=".GPS"
             android:exported="false" />
-        <activity android:name=".AddEditActivity" />
+
+        <activity
+            android:name=".AddEditActivity"/>
+
         <activity
             android:name=".SQLiteActivity"
             android:label="@string/title_activity_sqlite"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PegawaiTampilSemuaActivity" />
-        <activity android:name=".PegawaiTampilActivity" />
-        <activity android:name=".PegawaiMainActivity" />
-        <activity android:name=".ListActivity" />
-        <activity android:name=".ListViewActivity" />
-        <activity android:name=".HitungBMIActivity" />
+        <activity
+            android:name=".PegawaiTampilSemuaActivity" />
+        <activity
+            android:name=".PegawaiTampilActivity" />
+        <activity
+            android:name=".PegawaiMainActivity" />
+        <activity
+            android:name=".ListActivity"
+            android:label="List"/>
+        <activity
+            android:name=".ListViewActivity"
+            android:label="List View"/>
+        <activity
+            android:name=".HitungBMIActivity"
+            android:label="BMI"/>
         <activity
             android:name=".CalculatorActivity"
-            android:label="Kalkulator Advance" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".BilanganActivity" />
-        <activity android:name=".KalkulatorActivity" />
-        <activity android:name=".LingkaranActivity" />
-        <activity android:name=".NamaActivity" />
+            android:label="Calculator" />
+        <activity
+            android:name=".SignupActivity"
+            android:label="Sign Up"/>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login"/>
+        <activity
+            android:name=".BilanganActivity"
+            android:label="Bilangan"/>
+        <activity
+            android:name=".KalkulatorActivity"
+            android:label="Kalkulator"/>
+        <activity
+            android:name=".LingkaranActivity"
+            android:label="Lingkaran"/>
+        <activity
+            android:name=".NamaActivity"
+            android:label="Nama"/>
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -70,7 +95,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

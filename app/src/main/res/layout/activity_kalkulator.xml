@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_shape3"
+    android:background="@drawable/newbg"
     tools:context=".KalkulatorActivity">
 
     <TextView
+        android:background="@drawable/bg_shape2"
+        android:paddingTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="KALKULATOR SEDERHANA"
@@ -26,37 +28,39 @@
         android:layout_height="wrap_content"
         android:text="Input Angka Pertama"
         android:textStyle="bold"
-        android:textColor="@color/putih"
+        android:textColor="@color/colorPrimary"
         android:textSize="22sp"
         android:layout_marginLeft="7dp"/>
 
     <EditText
+        android:paddingLeft="7dp"
+        android:id="@+id/angka1"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="Angka Pertama"
-        android:textSize="23sp"
-        android:layout_marginTop="20dp"
-        android:background="@color/putih"
-        android:layout_marginRight="7dp"
         android:layout_marginLeft="7dp"
-        android:id="@+id/angka1"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/custom_input"
+        android:hint="Angka Pertama"
+        android:textSize="23sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Input Angka Kedua"
         android:textSize="22sp"
-        android:textColor="@color/putih"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="15dp"/>
 
     <EditText
+        android:paddingLeft="7dp"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Angka Kedua"
-        android:background="@color/putih"
+        android:background="@drawable/custom_input"
         android:textSize="23sp"
         android:layout_marginRight="7dp"
         android:layout_marginLeft="7dp"
@@ -65,28 +69,30 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="HITUNG"
+        android:text="Hitung"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/putih"
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/bttn_shape2"
+        android:background="@drawable/custom_button"
         android:id="@+id/btnHitung"/>
 
     <LinearLayout
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/bg_shape"
+        android:background="@drawable/custom_input"
         android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hasil"
-        android:textColor="@color/hitam"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginTop="10dp"
@@ -98,7 +104,7 @@
         android:layout_height="wrap_content"
         android:text="Pertambahan :"
         android:textSize="23sp"
-        android:textColor="@color/hitam"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"
         android:textStyle="bold"
@@ -109,7 +115,7 @@
         android:layout_height="wrap_content"
         android:text="Pengurangan :"
         android:textStyle="bold"
-        android:textColor="@color/hitam"
+        android:textColor="@color/colorPrimary"
         android:textSize="23sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"
@@ -120,7 +126,7 @@
         android:layout_height="wrap_content"
         android:text="Perkalian :"
         android:textStyle="bold"
-        android:textColor="@color/hitam"
+        android:textColor="@color/colorPrimary"
         android:textSize="23sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"
@@ -131,7 +137,7 @@
         android:layout_height="wrap_content"
         android:text="Pembagian :"
         android:textStyle="bold"
-        android:textColor="@color/hitam"
+        android:textColor="@color/colorPrimary"
         android:textSize="23sp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"

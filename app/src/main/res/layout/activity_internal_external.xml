@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/newbg"
     tools:context=".InternalExternalActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -92,15 +93,16 @@
         android:id="@+id/textBaca"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:inputType="textMultiLine"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/custom_button2"
         android:ems="10"
         android:gravity="left|top"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:hint="Hasil Baca File"
-        android:textSize="15dp"/>
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
 
 </LinearLayout>
