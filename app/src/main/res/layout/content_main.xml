@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,239 +9,283 @@
     android:background="@drawable/newbg"
     tools:showIn="@layout/app_bar_main">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp">
+
     <com.synnapps.carouselview.CarouselView
         android:id="@+id/carouselView"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         app:fillColor="#FFFFFFFF"
         app:pageColor="#00000000"
         app:radius="6dp"
-        app:slideInterval="3000"
+        app:slideInterval="3600"
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@+id/carouselView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carouselView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <Button
-            android:textStyle="bold"
-            android:layout_margin="4dp"
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:text="Nama"
-            android:id="@+id/nama"
-            android:background="@drawable/custom_button"/>
+                <Button
+                    android:drawableTop="@drawable/icon_nama"
+                    android:textColor="@color/putih"
+                    android:id="@+id/nama"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Nama"
+                    android:textStyle="bold"/>
 
-        <Button
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:text="Kalkulator"
-            android:id="@+id/kalkulator"
-            android:background="@drawable/custom_button"/>
+                <Button
+                    android:drawableTop="@drawable/icon_kalkulator"
+                    android:textColor="@color/putih"
+                    android:id="@+id/kalkulator"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Kalkulator"
+                    android:textStyle="bold"/>
 
-        <Button
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:layout_width="115dp"
-            android:layout_height="50dp"
-            android:text="Lingkaran"
-            android:id="@+id/lingkaran"
-            android:background="@drawable/custom_button"/>
+                <Button
+                    android:drawableTop="@drawable/icon_lingkaran"
+                    android:textColor="@color/putih"
+                    android:id="@+id/lingkaran"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Lingkaran"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:drawableTop="@drawable/icon_bilangan"
+                    android:textColor="@color/putih"
+                    android:id="@+id/bilangan"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Bilangan"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_login"
+                    android:textColor="@color/putih"
+                    android:id="@+id/login"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Login"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_signup"
+                    android:textColor="@color/putih"
+                    android:id="@+id/signup"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Sign Up"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:drawableTop="@drawable/icon_calculator"
+                    android:textColor="@color/putih"
+                    android:id="@+id/calculator"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Calculator"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_bmi"
+                    android:textColor="@color/putih"
+                    android:id="@+id/bmi"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="BMI"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_listview"
+                    android:textColor="@color/putih"
+                    android:id="@+id/listview"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="List View"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:drawableTop="@drawable/icon_catatan"
+                    android:textColor="@color/putih"
+                    android:id="@+id/catatan"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Catatan"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_file"
+                    android:textColor="@color/putih"
+                    android:id="@+id/internalexternal"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="File"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_storage"
+                    android:textColor="@color/putih"
+                    android:id="@+id/storage"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Storage"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:drawableTop="@drawable/icon_list"
+                    android:textColor="@color/putih"
+                    android:id="@+id/list"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="List"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_sql"
+                    android:textColor="@color/putih"
+                    android:id="@+id/sqlite"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="SQLite"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_mysql"
+                    android:textColor="@color/putih"
+                    android:id="@+id/mysql"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="MySQL"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:drawableTop="@drawable/icon_gps"
+                    android:textColor="@color/putih"
+                    android:id="@+id/gps"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="CEK GPS"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_seluler"
+                    android:textColor="@color/putih"
+                    android:id="@+id/seluler"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Seluler"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:drawableTop="@drawable/icon_sensor"
+                    android:textColor="@color/putih"
+                    android:id="@+id/sensor"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Sensor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Bilangan"
-                android:id="@+id/bilangan"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Login"
-                android:id="@+id/login"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Sign Up"
-                android:id="@+id/signup"
-                android:background="@drawable/custom_button"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Calculator"
-                android:id="@+id/calculator"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="BMI"
-                android:id="@+id/bmi"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="List View"
-                android:id="@+id/listview"
-                android:background="@drawable/custom_button"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Catatan"
-                android:id="@+id/catatan"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="File"
-                android:id="@+id/internalexternal"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Storage"
-                android:id="@+id/storage"
-                android:background="@drawable/custom_button"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="List"
-                android:id="@+id/list"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="SQLite"
-                android:id="@+id/sqlite"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="MySQL"
-                android:id="@+id/mysql"
-                android:background="@drawable/custom_button"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="CEK GPS"
-                android:id="@+id/gps"
-                android:background="@drawable/custom_button"/>
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:id="@+id/seluler"
-                android:layout_width="115dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/custom_button"
-                android:text="Seluler" />
-
-            <Button
-                android:textStyle="bold"
-                android:layout_margin="5dp"
-                android:layout_width="115dp"
-                android:layout_height="50dp"
-                android:text="Sensor"
-                android:id="@+id/sensor"
-                android:background="@drawable/custom_button"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>
