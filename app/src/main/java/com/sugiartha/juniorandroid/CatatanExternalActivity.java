@@ -33,6 +33,7 @@ public class CatatanExternalActivity extends AppCompatActivity {
         btnSimpan = findViewById(R.id.btn_simpan);
         btnLihat = findViewById(R.id.btn_baca);
         textCatatan = findViewById(R.id.text_catatan);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String path = this.getFilesDir().getAbsolutePath() + "/catatan.txt";
         File file = new File(path);
@@ -80,5 +81,14 @@ public class CatatanExternalActivity extends AppCompatActivity {
                 Toast.makeText(this, "Anda belum menulis catatan", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

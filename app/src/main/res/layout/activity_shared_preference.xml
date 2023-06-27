@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/newbg"
     android:orientation="vertical"
     tools:context=".SharedPreferenceActivity">
 
@@ -11,11 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username"
+            android:background="@drawable/custom_input"
+            android:paddingLeft="7dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:layout_gravity="center"
+            android:hint="Masukkan Nama"
+            android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -24,16 +32,25 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
+            android:background="@drawable/custom_input"
+            android:paddingLeft="7dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:layout_gravity="center"
+            android:hint="Masukkan Password"
+            android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
         android:text="login" />
 
 </LinearLayout>

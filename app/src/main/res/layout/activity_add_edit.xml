@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/newbg"
     tools:context=".AddEditActivity">
 
     <EditText
@@ -17,26 +18,36 @@
 
     <TextView
         android:id="@+id/text_header"
+        android:background="@drawable/bg_shape2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Masukkan Data Diri"
+        android:text="Data Diri"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:padding="10dp"
-        android:textColor="@android:color/black" />
+        android:textColor="@color/putih" />
 
 
     <TextView
+        android:textSize="18dp"
+        android:layout_marginBottom="12dp"
         android:id="@+id/text_label_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama :"
+        android:paddingLeft="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txt_name"
+        android:background="@drawable/custom_input"
+        android:paddingLeft="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -47,12 +58,22 @@
         android:id="@+id/text_label_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="7dp"
+        android:paddingLeft="7dp"
         android:text="Alamat :"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:layout_marginBottom="15dp"
         android:id="@+id/txt_address"
+        android:background="@drawable/custom_input"
+        android:paddingLeft="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -68,17 +89,25 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:id="@+id/btn_submit"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/putih"
             android:text="Submit"/>
 
         <Button
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
             android:id="@+id/btn_cancel"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/putih"
             android:text="Cancel"/>
 
     </LinearLayout>

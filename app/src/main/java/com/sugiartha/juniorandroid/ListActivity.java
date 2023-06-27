@@ -23,6 +23,7 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportActionBar().setTitle("ListView Sederhana"); //tampil judul
 
@@ -42,5 +43,14 @@ public class ListActivity extends AppCompatActivity {
                         "Memilih : "+namanegara[position], Toast.LENGTH_LONG).show();
             }
         });
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

@@ -5,9 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/newbg"
     tools:context=".CalculatorActivity">
 
     <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
         android:text="+"
         android:layout_height="wrap_content"
         android:id="@+id/tambah"
@@ -18,58 +23,71 @@
         android:layout_width="80dp" />
 
     <EditText
+        android:paddingLeft="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_input"
+        android:id="@+id/angka_pertama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/angka_pertama"
-        android:hint="Masukkan angka pertama"
-        android:textSize="14sp"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="22dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Masukkan Angka Pertama"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textSize="14sp" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_below="@+id/angka_pertama"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_input"
         android:id="@+id/angka_kedua"
-        android:hint="Masukkan angka kedua"
-        android:textSize="14sp"/>
-
-    <TextView
-        android:text="MASUKKAN DUA ANGKA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/angka_pertama"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:ems="10"
+        android:hint="Masukkan Angka Kedua"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/text_header"
+        android:background="@drawable/bg_shape2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:textColor="@color/putih" />
+
+    <TextView
+        android:background="@drawable/custom_input"
         android:text="0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/hasil"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:textSize="36sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="26sp"
         android:gravity="center" />
 
     <TextView
-        android:text="HASIl"
+        android:text="Hasil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:textAlignment="center"
+        android:gravity="center_horizontal"
         android:textStyle="normal|bold"
         android:textSize="24sp"
         android:layout_marginTop="35dp"
@@ -78,6 +96,8 @@
         android:layout_alignParentStart="true" />
 
     <Button
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
         android:text="-"
         android:layout_height="wrap_content"
         android:id="@+id/kurang"
@@ -88,6 +108,11 @@
         android:layout_toEndOf="@+id/tambah" />
 
     <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
         android:text="BERSIHKAN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,6 +121,9 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
+        android:layout_marginRight="10dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
         android:text="/"
         android:layout_height="wrap_content"
         android:id="@+id/bagi"
@@ -105,6 +133,9 @@
         android:layout_alignParentEnd="true" />
 
     <Button
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
         android:text="X"
         android:layout_height="wrap_content"
         android:id="@+id/kali"

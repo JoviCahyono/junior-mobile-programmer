@@ -18,6 +18,7 @@ public class KoneksiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koneksi);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button btnCheck = (Button) findViewById(R.id.btnCheck);
         btnCheck.setOnClickListener(new View.OnClickListener() {
@@ -51,5 +52,14 @@ public class KoneksiActivity extends AppCompatActivity {
             alert.setCancelable(false);
             alert.show();
         }
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

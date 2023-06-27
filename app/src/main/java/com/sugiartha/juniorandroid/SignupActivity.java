@@ -19,6 +19,7 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         spin = (Spinner) findViewById(R.id.spinner_id);//fetching view's id
         // Register a callback to be invoked when an item in this AdapterView has been selected
@@ -40,5 +41,14 @@ public class SignupActivity extends AppCompatActivity {
         ArrayAdapter<String> spin_adapter = new ArrayAdapter<String>(SignupActivity.this, android.R.layout.simple_spinner_item, gender);
         // setting adapters to spinners
         spin.setAdapter(spin_adapter);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

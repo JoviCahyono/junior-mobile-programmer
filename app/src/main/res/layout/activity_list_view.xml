@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView class="androidx.appcompat.app.AlertController$RecycleListView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,45 +9,58 @@
     android:orientation="horizontal"
     android:paddingBottom="5dp"
     android:paddingLeft="10dp"
-    android:paddingTop="5dp"
+    android:paddingTop="7dp"
     android:weightSum="2"
     tools:context=".ListViewActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.3"
-        android:padding="5dp">
-
+    <RelativeLayout
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/custom_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/custom_input"/>
+        </RelativeLayout>
         <ImageView
             android:id="@+id/imgView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@mipmap/ic_launcher" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1.7"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/text1"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:padding="10dp"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Text1"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Text2"
-            android:textSize="11dp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="bottom"
+                android:text="Text1"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Text2"
+                android:textSize="11dp"
+                tools:ignore="TextSizeCheck" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

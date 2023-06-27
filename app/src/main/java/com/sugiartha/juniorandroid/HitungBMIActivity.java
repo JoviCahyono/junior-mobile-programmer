@@ -20,6 +20,7 @@ public class HitungBMIActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hitung_bmi);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         txtBeratBadan = findViewById(R.id.txtBeratBadan); //Menyambungkan elemen dengan id txtBeratBadan yang ada di activity_main.xml kesini
         txtTinggibadan = findViewById(R.id.txtTinggiBadan); //Menyambungkan elemen dengan id txtTinggiBadan yang ada di activity_main.xml kesini
@@ -42,5 +43,14 @@ public class HitungBMIActivity extends AppCompatActivity {
                 txtStatusBadan.setText(statusBadan); //men-set tulisan yang ada di TextView sesuai dengan hasil dari perhitungan BMI (yaitu ada di string statusBadan)
             }
         });
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

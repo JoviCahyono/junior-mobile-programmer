@@ -17,6 +17,7 @@ public class DetailSharedPreferenceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_shared_preference);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView result = findViewById(R.id.detailUsername);
         Button btnLogout = findViewById(R.id.buttonLogOut);
@@ -35,5 +36,14 @@ public class DetailSharedPreferenceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

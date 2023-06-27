@@ -1,41 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/newbg"
     android:orientation="vertical"
     tools:context=".HitungBMIActivity">
 
-    <EditText
-        android:id="@+id/txtBeratBadan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Isikan berat badan (kg)"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/txtTinggiBadan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Isikan tinggi badan (m)"
-        android:inputType="number|numberDecimal" />
-
-    <Button
-        android:id="@+id/btnCekBMI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CEK BMI" />
 
     <TextView
+        android:id="@+id/textBMI"
+        android:background="@drawable/bg_shape2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:textColor="@color/putih" />
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="132dp"
+        android:layout_height="105dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="9dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/icon_bmi" />
+
+    <TextView
+        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berat Badan (Kg)"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"/>
+
+    <EditText
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/custom_input"
+        android:hint="Masukkan Berat Badan (Kg)"
+        android:id="@+id/txtBeratBadan"/>
+
+    <TextView
+        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tinggi Badan"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"/>
+
+    <EditText
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/custom_input"
+        android:hint="Masukkan Tinggi badan(M)"
+        android:id="@+id/txtTinggiBadan"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/putih"
+        android:background="@drawable/custom_button"
+        android:text="Cek Hasil"
+        android:id="@+id/btnCekBMI"/>
+
+
+    <TextView
+        android:gravity="center"
         android:id="@+id/txtStatusBadan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/custom_input"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="18dp"
         android:text="Status Badan"
-        android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textStyle="bold" />
 
 </LinearLayout>

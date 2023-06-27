@@ -23,6 +23,7 @@ public class InternalExternalActivity extends AppCompatActivity implements View.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_internal_external);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button buatFile = findViewById(R.id.btnBuatFile);
         Button ubahFile = findViewById(R.id.btnUbahFile);
@@ -129,5 +130,15 @@ public class InternalExternalActivity extends AppCompatActivity implements View.
     @Override
     public void onClick(View view) {
         jalanPerintah(view.getId());
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

@@ -19,6 +19,7 @@ public class SensorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ProximitySensor = (TextView) findViewById(R.id.proximitySensor);
         data = (TextView) findViewById(R.id.data);
         mySensorManager = (SensorManager) getSystemService(
@@ -49,4 +50,13 @@ public class SensorActivity extends AppCompatActivity {
             }
         }
     };
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

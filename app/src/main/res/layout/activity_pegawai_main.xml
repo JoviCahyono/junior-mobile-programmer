@@ -6,44 +6,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/newbg"
     tools:context=".PegawaiMainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama Pegawai" />
-
-    <EditText
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Nama Pegawai :"
+        android:paddingLeft="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:inputType="number"
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/custom_input"
+        android:hint="Masukkan Nama Pegawai"
         android:id="@+id/editTextName" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Posisi" />
-
-    <EditText
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Posisi :"
+        android:paddingLeft="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:inputType="number"
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/custom_input"
+        android:hint="Masukkan Posisi"
         android:id="@+id/editTextDesg" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gaji" />
-
-    <EditText
+        android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Gaji :"
+        android:paddingLeft="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:inputType="number"
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/custom_input"
+        android:hint="Masukkan Gaji"
         android:id="@+id/editTextSalary" />
 
     <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tambah Pegawai"
         android:id="@+id/buttonAdd" />
     <Button
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/putih"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Daftar Pegawai"

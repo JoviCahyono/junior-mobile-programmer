@@ -28,6 +28,7 @@ public class PegawaiMainActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pegawai_main);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Inisialisasi dari View
         editTextName = (EditText) findViewById(R.id.editTextName);
@@ -91,5 +92,14 @@ public class PegawaiMainActivity extends AppCompatActivity implements View.OnCli
         if(v == buttonView){
             startActivity(new Intent(this,PegawaiTampilSemuaActivity.class));
         }
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

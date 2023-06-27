@@ -13,6 +13,7 @@ public class ListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         lvResult = (ListView) findViewById(R.id.lvResult);
 
@@ -25,5 +26,14 @@ public class ListViewActivity extends AppCompatActivity {
 
         NegaraAdapter adapter = new NegaraAdapter(ListViewActivity.this, dataNegara);
         lvResult.setAdapter(adapter);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

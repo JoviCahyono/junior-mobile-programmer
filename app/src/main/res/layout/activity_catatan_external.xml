@@ -6,25 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:background="@drawable/newbg"
     tools:context=".CatatanExternalActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_button"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_shape2"
+        android:textStyle="bold"
         android:gravity="center"
+        android:textSize="22sp"
+        android:padding="10dp"
         android:text="CATATAN"
-        android:textSize="20dp"
         android:textColor="@color/putih"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
+        android:gravity="left"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Penyimpanan internal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:text="Penyimpanan internal" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -35,10 +40,11 @@
             android:id="@+id/input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="top"
-            android:hint="Mulai menulis"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:hint="Mulai Menulis"
             android:inputType="textMultiLine"
-            android:minLines="5" />
+            android:minLines="7" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -52,10 +58,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="11dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="11dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -90,11 +96,35 @@
             android:text="LIHAT CATATAN" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+<!--    <TextView-->
+<!--        android:paddingLeft="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginRight="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:background="@drawable/custom_input"-->
+<!--        android:id="@+id/text_catatan"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />-->
+
     <TextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:gravity="center"
         android:id="@+id/text_catatan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/custom_input"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="18dp"
+        android:text="Lihat Catatan" />
 
 </LinearLayout>
