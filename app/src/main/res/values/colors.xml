@@ -7,7 +7,14 @@
     <color name="biru">#337dff</color>
     <color name="orange">#fca220</color>
     <color name="putih">#FFFFFF</color>
+    <color name="richblack">#001011</color>
+    <color name="midnightgreen">#093A3E</color>
+    <color name="verdigris">#3AAFB9</color>
+    <color name="electricblue">#64E9EE</color>
+    <color name="lightskyblue">#97C8EB</color>
+    =======
     <color name="hitam">#000000</color>
     <color name="light">#ECE6D9</color>
     <color name="darkBlue">#01102B</color>
+    >>>>>>> backup
 </resources>

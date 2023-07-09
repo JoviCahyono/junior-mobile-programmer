@@ -10,100 +10,76 @@
 
 
     <TextView
-        android:id="@+id/textBMI"
         android:background="@drawable/bg_shape2"
+        android:id="@+id/txtberatbadanideal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BMI"
-        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:textSize="22sp"
-        android:padding="10dp"
-        android:textColor="@color/putih" />
-
+        android:text="Menghitung Berat Badan Ideal"
+        android:textColor="#093A3E"
+        android:textSize="24sp" />
 
     <ImageView
+        android:background="@color/colorPrimary"
         android:id="@+id/imageView7"
         android:layout_width="132dp"
         android:layout_height="105dp"
-        android:layout_gravity="left"
-        android:layout_marginLeft="9dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:background="@drawable/icon_bmi" />
+        app:srcCompat="@drawable/icon_bmi" />
 
     <TextView
-        android:paddingLeft="5dp"
+        android:id="@+id/txtberatbadankg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Berat Badan (Kg)"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="12dp"/>
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Berat Badan (kg)"
+        android:textSize="9pt" />
 
     <EditText
-        android:paddingLeft="7dp"
+        android:id="@+id/txtBeratBadan"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@drawable/custom_input"
-        android:hint="Masukkan Berat Badan (Kg)"
-        android:id="@+id/txtBeratBadan"/>
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20dp"
+        android:hint="Isikan berat badan (kg)"
+        android:inputType="number" />
 
     <TextView
-        android:paddingLeft="5dp"
+        android:id="@+id/txttinggibadancm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tinggi Badan"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="12dp"/>
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Tinggi Badan (m)"
+        android:textSize="9pt" />
 
     <EditText
-        android:paddingLeft="7dp"
+        android:id="@+id/txtTinggiBadan"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@drawable/custom_input"
-        android:hint="Masukkan Tinggi badan(M)"
-        android:id="@+id/txtTinggiBadan"/>
-
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20dp"
+        android:hint="Isikan tinggi badan (m)"
+        android:inputType="number|numberDecimal" />
 
     <Button
+        android:id="@+id/btnCekBMI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/putih"
         android:background="@drawable/custom_button"
-        android:text="Cek Hasil"
-        android:id="@+id/btnCekBMI"/>
-
+        android:textColor="@color/putih"
+        android:text="CEK BMI" />
 
     <TextView
-        android:gravity="center"
         android:id="@+id/txtStatusBadan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@drawable/custom_input"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:textSize="18dp"
         android:text="Status Badan"
-        android:textStyle="bold" />
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="24sp" />
 
 </LinearLayout>

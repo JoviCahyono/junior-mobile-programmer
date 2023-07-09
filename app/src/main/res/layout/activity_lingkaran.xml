@@ -9,84 +9,72 @@
     tools:context=".LingkaranActivity">
 
     <TextView
-        android:background="@drawable/bg_shape2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Luas dan Keliling Lingkaran"
+        android:textSize="30dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_shape2"
+        android:textColor="@color/putih"
         android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:padding="10dp"
-        android:textColor="@color/putih" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:paddingLeft="5dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Masukkan Jari-Jari"
+        android:paddingTop="40dp"
+        android:text="Masukkan Jari-Jari Lingkaran"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="12dp"/>
+        android:layout_marginLeft="7dp"
+        android:textColor="@color/hitam"
+        android:textSize="20sp"/>
 
     <EditText
-        android:inputType="number"
-        android:paddingLeft="7dp"
+        android:id="@+id/jari2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@drawable/custom_input"
-        android:hint="Masukkan Jari-Jari"
-        android:id="@+id/jari2"/>
+        android:layout_height="48dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="7dp"
+        android:background="@color/putih"
+        android:hint="Input Jari-Jari"
+        android:textSize="22sp" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="HITUNG"
+        android:textSize="18sp"
         android:textColor="@color/putih"
-        android:background="@drawable/custom_button"
-        android:text="Hitung"
+        android:textStyle="bold"
+        android:background="@drawable/bttn_shape2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
         android:id="@+id/hitung"/>
 
     <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@drawable/custom_input"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:textSize="18dp"
-        android:text="Luas"
+        android:text="Luas Lingkaran : "
         android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
+        android:layout_marginLeft="7dp"
         android:id="@+id/txtluas"/>
 
     <TextView
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:text="Keliling Lingkaran : "
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:textSize="23sp"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@drawable/custom_input"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:textSize="18dp"
-        android:text="Keliling"
+        android:layout_marginLeft="7dp"
         android:id="@+id/txtkeliling"/>
 
 </LinearLayout>

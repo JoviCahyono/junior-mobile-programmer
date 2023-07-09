@@ -1,148 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/newbg"
-    tools:context=".CalculatorActivity">
+    android:orientation="vertical">
 
-    <Button
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/custom_button"
-        android:textColor="@color/putih"
-        android:text="+"
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tambah"
-        android:layout_below="@+id/angka_kedua"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp"
-        android:layout_width="80dp" />
+        android:src="@drawable/logo_dts" />
 
     <EditText
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/custom_input"
-        android:id="@+id/angka_pertama"
+        android:id="@+id/editTextResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:hint="Masukkan Angka Pertama"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="14sp" />
-
-    <EditText
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_input"
-        android:id="@+id/angka_kedua"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/angka_pertama"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:ems="10"
-        android:hint="Masukkan Angka Kedua"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/text_header"
-        android:background="@drawable/bg_shape2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calculator"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:padding="10dp"
-        android:textColor="@color/putih" />
-
-    <TextView
-        android:background="@drawable/custom_input"
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/hasil"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textSize="26sp"
-        android:gravity="center" />
-
-    <TextView
-        android:text="Hasil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:gravity="center_horizontal"
-        android:textStyle="normal|bold"
+        android:layout_margin="16dp"
+        android:hint="Hasil"
         android:textSize="24sp"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/bersihkan"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textStyle="bold" />
 
-    <Button
-        android:background="@drawable/custom_button"
-        android:textColor="@color/putih"
-        android:text="-"
-        android:layout_height="wrap_content"
-        android:id="@+id/kurang"
-        android:layout_width="80dp"
-        android:layout_alignBaseline="@+id/tambah"
-        android:layout_alignBottom="@+id/tambah"
-        android:layout_toRightOf="@+id/tambah"
-        android:layout_toEndOf="@+id/tambah" />
-
-    <Button
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_button"
-        android:textColor="@color/putih"
-        android:text="BERSIHKAN"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bersihkan"
-        android:layout_below="@+id/tambah"
-        android:layout_centerHorizontal="true"/>
+        android:columnCount="4">
 
-    <Button
-        android:layout_marginRight="10dp"
-        android:background="@drawable/custom_button"
-        android:textColor="@color/putih"
-        android:text="/"
-        android:layout_height="wrap_content"
-        android:id="@+id/bagi"
-        android:layout_width="80dp"
-        android:layout_above="@+id/bersihkan"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="C" />
 
-    <Button
-        android:layout_marginRight="5dp"
-        android:background="@drawable/custom_button"
-        android:textColor="@color/putih"
-        android:text="X"
-        android:layout_height="wrap_content"
-        android:id="@+id/kali"
-        android:layout_width="80dp"
-        android:layout_alignBaseline="@+id/bagi"
-        android:layout_alignBottom="@+id/bagi"
-        android:layout_toLeftOf="@+id/bagi"
-        android:layout_toStartOf="@+id/bagi"/>
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="/" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0" />
+
+    </GridLayout>
+
+</LinearLayout>

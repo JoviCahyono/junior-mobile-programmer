@@ -29,6 +29,7 @@
             android:textSize="16sp" />
 
         <EditText
+            android:drawableLeft="@drawable/icon_person"
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
             android:padding="10dp" />
 
         <EditText
+            android:drawableLeft="@drawable/icon_lock"
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

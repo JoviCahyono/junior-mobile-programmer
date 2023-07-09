@@ -1,125 +1,198 @@
 package com.sugiartha.juniorandroid;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class CalculatorActivity extends AppCompatActivity {
 
-    //Deklarasi variable
-    EditText angka_pertama, angka_kedua;
-    Button tambah, kurang, kali, bagi, bersihkan;
-    TextView hasil;
-    ActionBar actionBar;
+    private EditText editTextResult;
+    private StringBuilder numberBuilder;
+    private double operand1, operand2;
+    private String operator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
-        //getSupportActionBar().setTitle("");
-        actionBar = getSupportActionBar();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        angka_pertama = (EditText) findViewById(R.id.angka_pertama);
-        angka_kedua = (EditText) findViewById(R.id.angka_kedua);
-        tambah = (Button)findViewById(R.id.tambah);
-        kurang = (Button)findViewById(R.id.kurang);
-        kali = (Button)findViewById(R.id.kali);
-        bagi = (Button)findViewById(R.id.bagi);
-        bersihkan = (Button) findViewById(R.id.bersihkan);
-        hasil = (TextView) findViewById(R.id.hasil);
+        editTextResult = findViewById(R.id.editTextResult);
+        numberBuilder = new StringBuilder();
 
-        tambah.setOnClickListener(new View.OnClickListener() {
+        Button buttonClear = findViewById(R.id.buttonClear);
+        buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((angka_pertama.getText().length()>0) && (angka_kedua.getText().length()>0))
-                {
-                    double angka1 = Double.parseDouble(angka_pertama.getText().toString());
-                    double angka2 = Double.parseDouble(angka_kedua.getText().toString());
-                    double result = angka1 + angka2;
-                    hasil.setText(Double.toString(result));
-                }
-                else {
-                    Toast toast = Toast.makeText(CalculatorActivity.this,
-                            "Mohon masukkan Angka pertama & Kedua", Toast.LENGTH_LONG);
-                    toast.show();
-                }
+                clearResult();
             }
         });
 
-        kurang.setOnClickListener(new View.OnClickListener() {
+        Button buttonDivide = findViewById(R.id.buttonDivide);
+        buttonDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((angka_pertama.getText().length()>0) && (angka_kedua.getText().length()>0))
-                {
-                    double angka1 = Double.parseDouble(angka_pertama.getText().toString());
-                    double angka2 = Double.parseDouble(angka_kedua.getText().toString());
-                    double result = angka1 - angka2;
-                    hasil.setText(Double.toString(result));
-                }
-                else {
-                    Toast toast = Toast.makeText(CalculatorActivity.this, "Mohon masukkan Angka pertama & Kedua", Toast.LENGTH_LONG);
-                    toast.show();
-                }
+                handleOperator("/");
             }
         });
 
-        kali.setOnClickListener(new View.OnClickListener() {
+        Button buttonMultiply = findViewById(R.id.buttonMultiply);
+        buttonMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((angka_pertama.getText().length()>0) && (angka_kedua.getText().length()>0))
-                {
-                    double angka1 = Double.parseDouble(angka_pertama.getText().toString());
-                    double angka2 = Double.parseDouble(angka_kedua.getText().toString());
-                    double result = angka1 * angka2;
-                    hasil.setText(Double.toString(result));
-                }
-                else {
-                    Toast toast = Toast.makeText(CalculatorActivity.this, "Mohon masukkan Angka pertama & Kedua", Toast.LENGTH_LONG);
-                    toast.show();
-                }
+                handleOperator("*");
             }
         });
 
-        bagi.setOnClickListener(new View.OnClickListener() {
+        Button buttonSubtract = findViewById(R.id.buttonSubtract);
+        buttonSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((angka_pertama.getText().length()>0) && (angka_kedua.getText().length()>0))
-                {
-                    double angka1 = Double.parseDouble(angka_pertama.getText().toString());
-                    double angka2 = Double.parseDouble(angka_kedua.getText().toString());
-                    double result = angka1 / angka2;
-                    hasil.setText(Double.toString(result));
-                }
-                else {
-                    Toast toast = Toast.makeText(CalculatorActivity.this, "Mohon masukkan Angka pertama & Kedua", Toast.LENGTH_LONG);
-                    toast.show();
-                }
+                handleOperator("-");
             }
         });
 
-        bersihkan.setOnClickListener(new View.OnClickListener() {
+        Button buttonAdd = findViewById(R.id.buttonAdd);
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                angka_pertama.setText("");
-                angka_kedua.setText("");
-                hasil.setText("0");
-                angka_pertama.requestFocus();
+                handleOperator("+");
+            }
+        });
+
+        Button buttonEquals = findViewById(R.id.buttonEquals);
+        buttonEquals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculateResult();
+            }
+        });
+
+        Button button0 = findViewById(R.id.button0);
+        button0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("0");
+            }
+        });
+
+        Button button1 = findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("1");
+            }
+        });
+
+        Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("2");
+            }
+        });
+
+        Button button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("3");
+            }
+        });
+
+        Button button4 = findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("4");
+            }
+        });
+
+        Button button5 = findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("5");
+            }
+        });
+
+        Button button6 = findViewById(R.id.button6);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("6");
+            }
+        });
+
+        Button button7 = findViewById(R.id.button7);
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("7");
+            }
+        });
+
+        Button button8 = findViewById(R.id.button8);
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("8");
+            }
+        });
+
+        Button button9 = findViewById(R.id.button9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendNumber("9");
             }
         });
     }
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
+
+    private void appendNumber(String number) {
+        numberBuilder.append(number);
+        editTextResult.setText(numberBuilder.toString());
     }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+
+    private void clearResult() {
+        numberBuilder.setLength(0);
+        editTextResult.setText("");
+    }
+
+    private void handleOperator(String op) {
+        if (numberBuilder.length() > 0) {
+            operand1 = Double.parseDouble(numberBuilder.toString());
+            operator = op;
+            clearResult();
+        }
+    }
+
+    private void calculateResult() {
+        if (numberBuilder.length() > 0) {
+            operand2 = Double.parseDouble(numberBuilder.toString());
+            double result = 0;
+
+            switch (operator) {
+                case "+":
+                    result = operand1 + operand2;
+                    break;
+                case "-":
+                    result = operand1 - operand2;
+                    break;
+                case "*":
+                    result = operand1 * operand2;
+                    break;
+                case "/":
+                    if (operand2 != 0)
+                        result = operand1 / operand2;
+                    else
+                        editTextResult.setText("Error");
+                    break;
+            }
+
+            editTextResult.setText(String.valueOf(result));
+            numberBuilder.setLength(0);
+        }
     }
 }
